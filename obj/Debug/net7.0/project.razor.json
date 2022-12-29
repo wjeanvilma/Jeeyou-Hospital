@@ -16560,13 +16560,28 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\SN629PF\\Projects\\JeeyouHospital\\Views\\Staffs\\Delete.cshtml",
+      "TargetPath": "Views\\Staffs\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\SN629PF\\Projects\\JeeyouHospital\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\SN629PF\\Projects\\JeeyouHospital\\Views\\Specializations\\Delete.cshtml",
+      "TargetPath": "Views\\Specializations\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\SN629PF\\Projects\\JeeyouHospital\\Views\\Home\\about.cshtml",
       "TargetPath": "Views\\Home\\about.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\SN629PF\\Projects\\JeeyouHospital\\Views\\Patients\\Index.cshtml",
+      "TargetPath": "Views\\Patients\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -16580,8 +16595,28 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\SN629PF\\Projects\\JeeyouHospital\\Views\\Specializations\\Details.cshtml",
+      "TargetPath": "Views\\Specializations\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\SN629PF\\Projects\\JeeyouHospital\\Views\\Staffs\\Index.cshtml",
+      "TargetPath": "Views\\Staffs\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\SN629PF\\Projects\\JeeyouHospital\\Views\\Staffs\\Edit.cshtml",
+      "TargetPath": "Views\\Staffs\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\SN629PF\\Projects\\JeeyouHospital\\Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\SN629PF\\Projects\\JeeyouHospital\\Views\\Patients\\Delete.cshtml",
+      "TargetPath": "Views\\Patients\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -16592,6 +16627,46 @@
     {
       "FilePath": "c:\\Users\\SN629PF\\Projects\\JeeyouHospital\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\SN629PF\\Projects\\JeeyouHospital\\Views\\Staffs\\Create.cshtml",
+      "TargetPath": "Views\\Staffs\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\SN629PF\\Projects\\JeeyouHospital\\Views\\Specializations\\Edit.cshtml",
+      "TargetPath": "Views\\Specializations\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\SN629PF\\Projects\\JeeyouHospital\\Views\\Patients\\Edit.cshtml",
+      "TargetPath": "Views\\Patients\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\SN629PF\\Projects\\JeeyouHospital\\Views\\Staffs\\Details.cshtml",
+      "TargetPath": "Views\\Staffs\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\SN629PF\\Projects\\JeeyouHospital\\Views\\Patients\\Details.cshtml",
+      "TargetPath": "Views\\Patients\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\SN629PF\\Projects\\JeeyouHospital\\Views\\Specializations\\Index.cshtml",
+      "TargetPath": "Views\\Specializations\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\SN629PF\\Projects\\JeeyouHospital\\Views\\Patients\\Create.cshtml",
+      "TargetPath": "Views\\Patients\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\SN629PF\\Projects\\JeeyouHospital\\Views\\Specializations\\Create.cshtml",
+      "TargetPath": "Views\\Specializations\\Create.cshtml",
       "FileKind": "mvc"
     }
   ],

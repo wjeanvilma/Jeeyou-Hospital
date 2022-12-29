@@ -1,6 +1,11 @@
+using Microsoft.EntityFrameworkCore;
+using JeeyouHospital.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+var conn = builder.Configuration.GetConnectionString("HospitalManagementDbConnection");
+builder.Services.AddDbContext<HospitalManagementDbContext>(q=> q.UseSqlServer(conn));
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
