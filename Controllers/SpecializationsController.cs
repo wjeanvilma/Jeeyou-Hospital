@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using JeeyouHospital.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace JeeyouHospital.Controllers
 {
+    [Authorize]
     public class SpecializationsController : Controller
     {
         private readonly HospitalManagementDbContext _context;

@@ -8,12 +8,26 @@
     ".NETCoreApp,Version=v7.0": {
       "JeeyouHospital/1.0.0": {
         "dependencies": {
+          "Auth0.AspNetCore.Authentication": "1.0.4",
           "Microsoft.EntityFrameworkCore.Design": "7.0.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.1",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "7.0.1"
         },
         "runtime": {
           "JeeyouHospital.dll": {}
+        }
+      },
+      "Auth0.AspNetCore.Authentication/1.0.4": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication.OpenIdConnect": "6.0.9",
+          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "6.21.0",
+          "System.Text.Encodings.Web": "7.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Auth0.AspNetCore.Authentication.dll": {
+            "assemblyVersion": "1.0.4.0",
+            "fileVersion": "1.0.4.0"
+          }
         }
       },
       "Azure.Core/1.24.0": {
@@ -55,6 +69,17 @@
           "lib/net6.0/Humanizer.dll": {
             "assemblyVersion": "2.14.0.0",
             "fileVersion": "2.14.1.48190"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.OpenIdConnect/6.0.9": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "6.21.0"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.Authentication.OpenIdConnect.dll": {
+            "assemblyVersion": "6.0.9.0",
+            "fileVersion": "6.0.922.41926"
           }
         }
       },
@@ -2275,6 +2300,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Auth0.AspNetCore.Authentication/1.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ep06opOlwFn8UsP7yg4BJeearTzIgW0w4zGxL+xt/y4g3Km2ezxE6IotiuoA8ARUHE+j6QvZLJmF5ONLRwomEw==",
+      "path": "auth0.aspnetcore.authentication/1.0.4",
+      "hashPath": "auth0.aspnetcore.authentication.1.0.4.nupkg.sha512"
+    },
     "Azure.Core/1.24.0": {
       "type": "package",
       "serviceable": true,
@@ -2295,6 +2327,13 @@
       "sha512": "sha512-lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authentication.OpenIdConnect/6.0.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Gw/lsIzd0dGBXktwb6XzyfvJhCFh/N2RGrXEho526c5MOLw0LIQltXWp8akSDApMicS1eA/rBh1VPzND2h4lSA==",
+      "path": "microsoft.aspnetcore.authentication.openidconnect/6.0.9",
+      "hashPath": "microsoft.aspnetcore.authentication.openidconnect.6.0.9.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Razor.Language/6.0.11": {
       "type": "package",

@@ -273,3 +273,5 @@ C:\Users\SN629PF\Projects\JeeyouHospital\bin\Debug\net7.0\Microsoft.EntityFramew
 C:\Users\SN629PF\Projects\JeeyouHospital\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\SN629PF\Projects\JeeyouHospital\bin\Debug\net7.0\Mono.TextTemplating.dll
 C:\Users\SN629PF\Projects\JeeyouHospital\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\SN629PF\Projects\JeeyouHospital\bin\Debug\net7.0\Auth0.AspNetCore.Authentication.dll
+C:\Users\SN629PF\Projects\JeeyouHospital\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll

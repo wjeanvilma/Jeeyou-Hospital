@@ -14,4 +14,8 @@ public partial class Patient
     public string PatientId { get; set; } = null!;
 
     public DateTime? DateOfBirth { get; set; }
+
+    public virtual ICollection<Appointment> Appointments { get; } = new List<Appointment>();
+
+    public virtual ICollection<Result> Results { get; } = new List<Result>();
 }

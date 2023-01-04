@@ -16,4 +16,6 @@ public partial class Staff
     public DateTime? DateOfBirth { get; set; }
 
     public int? YearsOfExperiences { get; set; }
+
+    public virtual ICollection<Appointment> Appointments { get; } = new List<Appointment>();
 }

@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "xlNu7ykxb177VheXaFrk/8159sCV39+3VGBYNeaTcmW/VhOaWbTsrSOGos8vZLClGevoedwfKt8GNqC05V4CLA==",
+  "dgSpecHash": "fA1kxOFOgsVmRDtDylnzQiKETcoZ++dZiLj8q7tM+Uk55m8Cx3pEXqFpOn5IE0YixK/wmrpBe+/iKAT7kuRBVg==",
   "success": true,
   "projectFilePath": "C:\\Users\\SN629PF\\Projects\\JeeyouHospital\\JeeyouHospital.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\SN629PF\\.nuget\\packages\\auth0.aspnetcore.authentication\\1.0.4\\auth0.aspnetcore.authentication.1.0.4.nupkg.sha512",
     "C:\\Users\\SN629PF\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\SN629PF\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\SN629PF\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\SN629PF\\.nuget\\packages\\microsoft.aspnetcore.authentication.openidconnect\\6.0.9\\microsoft.aspnetcore.authentication.openidconnect.6.0.9.nupkg.sha512",
     "C:\\Users\\SN629PF\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\6.0.11\\microsoft.aspnetcore.razor.language.6.0.11.nupkg.sha512",
     "C:\\Users\\SN629PF\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\SN629PF\\.nuget\\packages\\microsoft.build\\17.3.2\\microsoft.build.17.3.2.nupkg.sha512",

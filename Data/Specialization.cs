@@ -10,4 +10,6 @@ public partial class Specialization
     public string Name { get; set; } = null!;
 
     public string? Description { get; set; }
+
+    public virtual ICollection<Appointment> Appointments { get; } = new List<Appointment>();
 }

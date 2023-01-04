@@ -11,89 +11,94 @@ using Microsoft.AspNetCore.Authorization;
 namespace JeeyouHospital.Controllers
 {
     [Authorize]
-    public class PatientsController : Controller
+    public class ResultsController : Controller
     {
         private readonly HospitalManagementDbContext _context;
 
-        public PatientsController(HospitalManagementDbContext context)
+        public ResultsController(HospitalManagementDbContext context)
         {
             _context = context;
         }
 
-        // GET: Patients
+        // GET: Results
         public async Task<IActionResult> Index()
         {
-              return _context.Patients != null ? 
-                          View(await _context.Patients.ToListAsync()) :
-                          Problem("Entity set 'HospitalManagementDbContext.Patients'  is null.");
+            var hospitalManagementDbContext = _context.Results.Include(r => r.Appointment).Include(r => r.Patient);
+            return View(await hospitalManagementDbContext.ToListAsync());
         }
 
-        // GET: Patients/Details/5
+        // GET: Results/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.Patients == null)
+            if (id == null || _context.Results == null)
             {
                 return NotFound();
             }
 
-            var patient = await _context.Patients
+            var result = await _context.Results
+                .Include(r => r.Appointment)
+                .Include(r => r.Patient)
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (patient == null)
+            if (result == null)
             {
                 return NotFound();
             }
 
-            return View(patient);
+            return View(result);
         }
 
-
-        
-        // GET: Patients/Create
+        // GET: Results/Create
         public IActionResult Create()
         {
+            ViewData["AppointmentId"] = new SelectList(_context.Appointments, "Id", "Id");
+            ViewData["PatientId"] = new SelectList(_context.Patients, "Id", "Id");
             return View();
         }
 
-        // POST: Patients/Create
+        // POST: Results/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,FirstName,LastName,PatientId,DateOfBirth")] Patient patient)
+        public async Task<IActionResult> Create([Bind("Id,PatientId,AppointmentId,Results,Date")] Result result)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(patient);
+                _context.Add(result);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(patient);
+            ViewData["AppointmentId"] = new SelectList(_context.Appointments, "Id", "Id", result.AppointmentId);
+            ViewData["PatientId"] = new SelectList(_context.Patients, "Id", "Id", result.PatientId);
+            return View(result);
         }
 
-        // GET: Patients/Edit/5
+        // GET: Results/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.Patients == null)
+            if (id == null || _context.Results == null)
             {
                 return NotFound();
             }
 
-            var patient = await _context.Patients.FindAsync(id);
-            if (patient == null)
+            var result = await _context.Results.FindAsync(id);
+            if (result == null)
             {
                 return NotFound();
             }
-            return View(patient);
+            ViewData["AppointmentId"] = new SelectList(_context.Appointments, "Id", "Id", result.AppointmentId);
+            ViewData["PatientId"] = new SelectList(_context.Patients, "Id", "Id", result.PatientId);
+            return View(result);
         }
 
-        // POST: Patients/Edit/5
+        // POST: Results/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,FirstName,LastName,PatientId,DateOfBirth")] Patient patient)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,PatientId,AppointmentId,Results,Date")] Result result)
         {
-            if (id != patient.Id)
+            if (id != result.Id)
             {
                 return NotFound();
             }
@@ -102,12 +107,12 @@ namespace JeeyouHospital.Controllers
             {
                 try
                 {
-                    _context.Update(patient);
+                    _context.Update(result);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!PatientExists(patient.Id))
+                    if (!ResultExists(result.Id))
                     {
                         return NotFound();
                     }
@@ -118,49 +123,53 @@ namespace JeeyouHospital.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(patient);
+            ViewData["AppointmentId"] = new SelectList(_context.Appointments, "Id", "Id", result.AppointmentId);
+            ViewData["PatientId"] = new SelectList(_context.Patients, "Id", "Id", result.PatientId);
+            return View(result);
         }
 
-        // GET: Patients/Delete/5
+        // GET: Results/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.Patients == null)
+            if (id == null || _context.Results == null)
             {
                 return NotFound();
             }
 
-            var patient = await _context.Patients
+            var result = await _context.Results
+                .Include(r => r.Appointment)
+                .Include(r => r.Patient)
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (patient == null)
+            if (result == null)
             {
                 return NotFound();
             }
 
-            return View(patient);
+            return View(result);
         }
 
-        // POST: Patients/Delete/5
+        // POST: Results/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.Patients == null)
+            if (_context.Results == null)
             {
-                return Problem("Entity set 'HospitalManagementDbContext.Patients'  is null.");
+                return Problem("Entity set 'HospitalManagementDbContext.Results'  is null.");
             }
-            var patient = await _context.Patients.FindAsync(id);
-            if (patient != null)
+            var result = await _context.Results.FindAsync(id);
+            if (result != null)
             {
-                _context.Patients.Remove(patient);
+                _context.Results.Remove(result);
             }
             
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool PatientExists(int id)
+        private bool ResultExists(int id)
         {
-          return (_context.Patients?.Any(e => e.Id == id)).GetValueOrDefault();
+          return (_context.Results?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }
